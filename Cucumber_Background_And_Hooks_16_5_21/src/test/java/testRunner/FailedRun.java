@@ -6,10 +6,10 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {"src/test/resources/features" },
+@CucumberOptions(features = {"@target/failedrerun.txt" },
 glue= {"stepDefinitions","AppHooks"},
-plugin ={"pretty","rerun:target/failedrerun.txt"},
+plugin ={"pretty"},
 monochrome = true)
-public class MyTestRunner {
+public class FailedRun {
 
 }
